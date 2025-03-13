@@ -1,7 +1,5 @@
 package bluebeer.mhwild.application.usecase;
 
-import bluebeer.mhwild.domain.Action;
-import bluebeer.mhwild.domain.ActionRepository;
 import java.io.IOException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -13,9 +11,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LanceQueryService {
 
-  private final ActionRepository actionRepository;
 
-  public List<Action> findLanceActions() throws IOException {
-    return null;
-  }
+//  public List<Action> findLanceActions() throws IOException {
+//    return null;
+//  }
 }

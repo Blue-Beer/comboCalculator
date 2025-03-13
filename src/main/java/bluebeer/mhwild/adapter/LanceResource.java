@@ -3,7 +3,6 @@ package bluebeer.mhwild.adapter;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 import bluebeer.mhwild.application.usecase.LanceQueryService;
-import bluebeer.mhwild.domain.Action;
 import java.io.IOException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -22,13 +21,13 @@ public class LanceResource {
 
   private final LanceQueryService lanceQueryService;
 
-  @GetMapping("ListActions")
-  public ResponseEntity<List<Action>> findLanceActions() throws IOException {
-
-    List<Action> actions = lanceQueryService.findLanceActions();
-
-    return ResponseEntity.status(HttpStatus.OK).contentType(APPLICATION_JSON).body(actions);
-  }
+//  @GetMapping("ListActions")
+//  public ResponseEntity<List<Action>> findLanceActions() throws IOException {
+//
+//    List<Action> actions = lanceQueryService.findLanceActions();
+//
+//    return ResponseEntity.status(HttpStatus.OK).contentType(APPLICATION_JSON).body(actions);
+//  }
 
 
 }
