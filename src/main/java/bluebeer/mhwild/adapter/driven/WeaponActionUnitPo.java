@@ -1,12 +1,13 @@
-package bluebeer.mhwild.domain;
+package bluebeer.mhwild.adapter.driven;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.math.BigDecimal;
 import lombok.Data;
 
+@TableName("WEAPON_ACTION_UNIT")
 @Data
-public abstract class WeaponActionUnit {
+public class WeaponActionUnitPo {
 
   @TableId
   private String weaponId;

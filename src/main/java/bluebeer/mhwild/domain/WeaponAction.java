@@ -8,22 +8,19 @@ import java.util.List;
 import java.util.stream.IntStream;
 import lombok.Data;
 
-@TableName("WEAPON_ACTION")
 @Data
 public class WeaponAction {
 
   private String weaponId;
-  @TableId
+
   private String actionId;
 
   private String actionName;
 
   private String actionUnits;
 
-  @TableField(exist = false)
   private List<WeaponActionUnit> actionUnitList;
 
-  @TableField(exist = false)
   private List<Boolean> actionUnitActiveList;
 
   private WeaponAction getActiveAction() {
