@@ -1,6 +1,5 @@
-package bluebeer.mhwild.application.factory;
+package bluebeer.mhwild.domain;
 
-import bluebeer.mhwild.domain.WeaponActionUnit;
 import bluebeer.mhwild.domain.lance.LanceActionUnit;
 
 public class WeaponActionUnitFactory {

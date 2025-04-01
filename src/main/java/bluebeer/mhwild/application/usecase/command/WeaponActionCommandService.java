@@ -1,4 +1,4 @@
-package bluebeer.mhwild.application.usecase;
+package bluebeer.mhwild.application.usecase.command;
 
 import bluebeer.mhwild.adapter.driven.WeaponActionMapper;
 import bluebeer.mhwild.domain.WeaponAction;

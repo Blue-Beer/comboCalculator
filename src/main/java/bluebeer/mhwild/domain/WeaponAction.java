@@ -36,14 +36,13 @@ public class WeaponAction {
         .filter(i -> actionUnitActiveList.get(i)) // 只保留 active == true 的
         .forEach(i -> activeUnits.add(actionUnitList.get(i)));
 
-    // 创建新对象，保留已激活的 Action Units
+    // 复制当前对象，但只保留激活的 Action Units
     WeaponAction newAction = new WeaponAction();
-    newAction.setWeaponId(this.weaponId);
-    newAction.setActionId(this.actionId);
-    newAction.setActionName(this.actionName);
-    newAction.setActionUnits(this.actionUnits);
-    newAction.setActionUnitList(activeUnits);
-    newAction.setActionUnitActiveList(null); // 这个可以不再需要
+    newAction.weaponId = this.weaponId;
+    newAction.actionId = this.actionId;
+    newAction.actionName = this.actionName;
+    newAction.actionUnits = this.actionUnits;
+    newAction.actionUnitList = activeUnits;
 
     return newAction;
   }

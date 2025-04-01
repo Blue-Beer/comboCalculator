@@ -1,6 +1,6 @@
 package bluebeer.mhwild.adapter.driving;
 
-import bluebeer.mhwild.application.usecase.LanceQueryService;
+import bluebeer.mhwild.application.usecase.query.LanceQueryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;

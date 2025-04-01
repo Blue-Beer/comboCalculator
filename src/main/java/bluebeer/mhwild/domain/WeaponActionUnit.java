@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import lombok.Data;
 
 @Data
-public abstract class WeaponActionUnit {
+public class WeaponActionUnit {
 
   @TableId
   private String weaponId;
@@ -20,6 +20,4 @@ public abstract class WeaponActionUnit {
   private Integer maxFrame;
   private Boolean criticalCheck;
   private Boolean hitzoneCheck;
-
-  // 抽象方法，由子类实现
 }

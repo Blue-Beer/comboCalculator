@@ -1,7 +1,5 @@
-package bluebeer.mhwild.application.usecase;
+package bluebeer.mhwild.application.usecase.query;
 
-import java.io.IOException;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
