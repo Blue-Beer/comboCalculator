@@ -1,15 +1,14 @@
-package bluebeer.mhwild.domain;
+package bluebeer.mhwild.domain.weaponAction;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import bluebeer.mhwild.domain.core.AggregationRoot;
+import bluebeer.mhwild.domain.weaponActionUnit.WeaponActionUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 import lombok.Data;
 
 @Data
-public class WeaponAction {
+public class WeaponAction implements AggregationRoot{
 
   private String weaponId;
 

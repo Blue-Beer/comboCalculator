@@ -1,9 +1,10 @@
 package bluebeer.mhwild.application.usecase.command;
 
-import bluebeer.mhwild.adapter.driven.WeaponActionMapper;
-import bluebeer.mhwild.domain.WeaponAction;
-import bluebeer.mhwild.domain.WeaponActionUnit;
-import java.util.List;
+import bluebeer.mhwild.adapter.driven.database.weaponAction.WeaponActionMapper;
+import bluebeer.mhwild.domain.weaponAction.WeaponAction;
+import bluebeer.mhwild.domain.weaponAction.WeaponActionCommand;
+import bluebeer.mhwild.domain.weaponAction.WeaponActionFactory;
+import bluebeer.mhwild.domain.weaponAction.WeaponActionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,17 +14,18 @@ public class WeaponActionCommandService {
 
   private final WeaponActionMapper weaponActionMapper;
 
-  public void save(List<WeaponActionUnit> weaponActionUnits, String actionName) {
-    WeaponAction newAction = new WeaponAction();
-    newAction.setWeaponId(weaponActionUnits.get(0).getWeaponId());
-    newAction.setActionName(actionName);
-    String actionUnits = weaponActionUnits.stream()
-        .map(WeaponActionUnit::getId)
-        .reduce((a, b) -> a + "," + b)
-        .orElse("");
-    newAction.setActionUnits(actionUnits);
-    newAction.setActionUnitList(weaponActionUnits);
-    weaponActionMapper.insert(newAction);
+  private final WeaponActionFactory weaponActionFactory;
+
+  private final WeaponActionRepository weaponActionRepository;
+
+  public String save(String weaponId, WeaponActionCommand command) {
+
+    WeaponAction newAction = weaponActionFactory.create(weaponId, command);
+
+    weaponActionRepository.save(newAction);
+
+    return newAction.getActionId();
+
   }
 
 }

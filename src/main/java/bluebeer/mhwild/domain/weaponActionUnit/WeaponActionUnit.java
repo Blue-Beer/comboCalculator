@@ -1,13 +1,12 @@
-package bluebeer.mhwild.adapter.driven;
+package bluebeer.mhwild.domain.weaponActionUnit;
 
+import bluebeer.mhwild.domain.core.Entity;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import java.math.BigDecimal;
 import lombok.Data;
 
-@TableName("WEAPON_ACTION_UNIT")
 @Data
-public class WeaponActionUnitPo {
+public class WeaponActionUnit implements Entity {
 
   @TableId
   private String weaponId;
@@ -20,7 +19,5 @@ public class WeaponActionUnitPo {
   private Integer minFrame;
   private Integer maxFrame;
   private Boolean criticalCheck;
-  private Boolean hitzoneCheck;
-
-  // 抽象方法，由子类实现
+  private Boolean hitZoneCheck;
 }
