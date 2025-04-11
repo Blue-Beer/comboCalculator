@@ -43,8 +43,6 @@ public class WeaponActionGetServiceImpl implements WeaponActionGetService {
   @Override
   public WeaponActionDto getUnits(WeaponActionPo weaponAction) {
 
-    List<WeaponActionDto> results = new ArrayList<>();
-
     WeaponActionDto weaponActionDto = new WeaponActionDto();
     BeanCopyUtil.copyProperties(weaponAction, weaponActionDto);
     List<String> units = Arrays.asList(weaponActionDto.getActionUnits().split(","));
